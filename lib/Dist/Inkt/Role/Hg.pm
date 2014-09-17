@@ -5,7 +5,7 @@ use warnings;
 package Dist::Inkt::Role::Hg;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.003';
+our $VERSION   = '0.004';
 
 use Moose::Role;
 use File::chdir;
@@ -32,10 +32,14 @@ after BUILD => sub
 	
 	$self->setup_prerelease_action(sub {
 		local $CWD = $self->rootdir;
-		my $stat = `hg status`;
-		if ($stat =~ /\w/) {
+		my @stat =
+			grep !/^\?(.+)\.tar.gz/,  # allow the recently built tarball!
+			grep /\w/,
+			split /\r?\n/,
+			`hg status`;
+		if (@stat) {
 			$self->log("Mercurial has uncommitted changes - please commit them");
-			$self->log($_) for grep /\w/, split /\r?\n/, $stat;
+			$self->log($_) for @stat;
 			system("/bin/sh");
 		}
 	}) if $self->can("setup_prerelease_action");

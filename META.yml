@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: '6.17'
 dynamic_config: 0
-generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.021, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.022, CPAN::Meta::Converter version 2.140640'
 keywords: []
 license: perl
 meta-spec:
@@ -25,7 +25,7 @@ optional_features: {}
 provides:
   Dist::Inkt::Role::Hg:
     file: lib/Dist/Inkt/Role/Hg.pm
-    version: '0.003'
+    version: '0.004'
 requires:
   Dist::Inkt: '0'
   File::chdir: '0'
@@ -39,4 +39,4 @@ resources:
   homepage: https://metacpan.org/release/Dist-Inkt-Role-Hg
   license: http://dev.perl.org/licenses/
   repository: git://github.com/tobyink/p5-dist-inkt-role-hg.git
-version: '0.003'
+version: '0.004'

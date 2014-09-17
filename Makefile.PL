@@ -7,7 +7,7 @@ my $meta = {
   "abstract"       => "Mercurial-related behaviour for Dist::Inkt",
   "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config" => 0,
-  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.021, CPAN::Meta::Converter version 2.140640",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.022, CPAN::Meta::Converter version 2.140640",
   "keywords"       => [],
   "license"        => ["perl_5"],
   "meta-spec"      => {
@@ -32,7 +32,7 @@ my $meta = {
                         test      => { requires => { "Test::More" => 0.96 } },
                       },
   "provides"       => {
-                        "Dist::Inkt::Role::Hg" => { file => "lib/Dist/Inkt/Role/Hg.pm", version => 0.003 },
+                        "Dist::Inkt::Role::Hg" => { file => "lib/Dist/Inkt/Role/Hg.pm", version => 0.004 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -48,7 +48,7 @@ my $meta = {
                                         },
                         x_identifier => "http://purl.org/NET/cpan-uri/dist/Dist-Inkt-Role-Hg/project",
                       },
-  "version"        => 0.003,
+  "version"        => 0.004,
 };
 
 my %dynamic_config;
